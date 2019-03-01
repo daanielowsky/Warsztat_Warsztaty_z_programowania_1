@@ -33,10 +33,10 @@ public class GuessNumberApp {
             int tmp = max;
             max = min;
             min = tmp;
+            TimeUnit.MILLISECONDS.sleep(800);
         }
 
         int randNumber = min + rand.nextInt(max + 1);
-        TimeUnit.MILLISECONDS.sleep(800);
 
         System.out.println("Musisz zgadnąć liczbę wymyśloną przeze mnie. Liczba znajduje się w przedziale od " + min + " do " + max + ".");
         TimeUnit.MILLISECONDS.sleep(800);
@@ -59,10 +59,19 @@ public class GuessNumberApp {
             } else if (chosenNumber < randNumber) {
                 System.err.print("Za mało! Podaj swoją " + no + " liczbę: ");
             } else {
-                System.out.println("GRATULACJE! Udało Ci się zgadnąć liczbę.");
+                lettering("GRATULACJE! Udało Ci się zgadnąć liczbę.");
                 break;
             }
 
         }
     }
+    static void lettering(String str) throws InterruptedException {
+
+        for (int i = 0; i < str.length(); i++) {
+            System.out.print(str.charAt(i));
+            TimeUnit.MILLISECONDS.sleep(75);
+        }
+        System.out.println();
+    }
 }
+
