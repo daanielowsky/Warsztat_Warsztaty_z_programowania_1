@@ -1,9 +1,8 @@
 package pl.dpawlicki.workshops_1.lotto;
 
-import java.sql.Time;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Random;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -23,19 +22,29 @@ public class LottoApp {
 
         lettering("Dzisiaj zagramy w Lotto!");
         System.out.println("Sprawdźmy czy masz dzisiaj szczęście.");
-        System.out.print("Podaj swoje liczby do losowania: ");
+        System.out.println("Podaj swoje liczby do losowania. ");
         Scanner scan = new Scanner(System.in);
         int i = 1;
         int j = 0;
         while (j < 6) {
-            System.out.print("Podaj swoją " + i + " liczbę: ");
-            number = scan.nextInt();
-            yourNumbers[j] = number;
-            System.out.println(Arrays.toString(yourNumbers));
-            i++;
-            j++;
+            try {
+                System.out.print("Podaj swoją " + i + " liczbę: ");
+                number = scan.nextInt();
+                if (number > 0 && number <= 49) {
+                    yourNumbers[j] = number;
+                    System.out.println(Arrays.toString(yourNumbers));
+                    i++;
+                    j++;
+                } else {
+                    System.out.println("W lotto liczby są w przedziale od 1 do 49!");
+                }
+            } catch (InputMismatchException exp) {
+                scan.next();
+                System.out.println("Z tego co pamiętam w lotto nie ma literek");
+
+            }
         }
-        System.out.println();
+        System.out.println("");
         TimeUnit.MILLISECONDS.sleep(450);
         System.out.println("Wylosowane liczby to:");
         System.out.println();
