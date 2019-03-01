@@ -1,6 +1,5 @@
-package pl.dpawlicki.workshops.guess_number;
+package pl.dpawlicki.workshops_1.guess_number;
 
-import java.sql.Time;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;

@@ -1,4 +1,4 @@
-# Warsztaty z programowania 1
+# Workshops 1
 
 Repozytorium z zadaniami warsztatowymi podczas kursu z podstaw Javy (kilka gierek).
 
@@ -13,11 +13,7 @@ Repozytorium z zadaniami warsztatowymi podczas kursu z podstaw Javy (kilka giere
 ### Gra w zgadywanie liczb:
 
 ```text
-Do uzupełnienia
-```
-
-```text
-Do uzupełnienia
+Gra polega na wybraniu przedziału liczbowego w którym chcemy zgadywać liczbę i następnie przy próbie odgadnięcia.
 ```
 
 
