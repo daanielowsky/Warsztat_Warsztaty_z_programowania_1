@@ -17,5 +17,11 @@ Gra polega na wybraniu przedziału liczbowego w którym chcemy zgadywać liczbę
 próbie odgadnięcia.
 ```
 
+### Symulator LOTTO:
+
+```text
+Prosty symulator lotto.
+```
+
 
 
