@@ -13,7 +13,8 @@ Repozytorium z zadaniami warsztatowymi podczas kursu z podstaw Javy (kilka giere
 ### Gra w zgadywanie liczb:
 
 ```text
-Gra polega na wybraniu przedziału liczbowego w którym chcemy zgadywać liczbę i następnie przy próbie odgadnięcia.
+Gra polega na wybraniu przedziału liczbowego w którym chcemy zgadywać liczbę i następnej
+próbie odgadnięcia.
 ```
 
 
