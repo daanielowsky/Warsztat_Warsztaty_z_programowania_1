@@ -23,5 +23,12 @@ próbie odgadnięcia.
 Prosty symulator lotto.
 ```
 
+### Gra w zgadywanie liczb V2:
+
+```text
+Gra polega na podobnej zasadzie jak "Gra w zgadywanie liczb", ale w tej wersji to komputer
+odgaduje wybraną przez nas liczbę.
+```
+
 
 
