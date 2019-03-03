@@ -30,5 +30,11 @@ Gra polega na podobnej zasadzie jak "Gra w zgadywanie liczb", ale w tej wersji t
 odgaduje wybraną przez nas liczbę.
 ```
 
+### Symulator rzutu kostką:
+
+```text
+Prosty symulator rzutu kostką.
+Do wyboru mamy kości D3, D4, D6, D8, D10, D12, D20, D100.
+
 
 
