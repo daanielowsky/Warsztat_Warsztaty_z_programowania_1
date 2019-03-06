@@ -48,5 +48,11 @@ y = rodzaj kostki,
 z = modyfikator.
 ```
 
+### Wyszukiwarka najpopularniejszych słów
+
+```text
+xyz
+```
+
 
 
