@@ -35,6 +35,17 @@ odgaduje wybraną przez nas liczbę.
 ```text
 Prosty symulator rzutu kostką.
 Do wyboru mamy kości D3, D4, D6, D8, D10, D12, D20, D100.
+Możemy wybrać do tego ile razy chcemy rzucić kością i jaki modyfikator dodać bądź odjąć od wyniku.
+```
+
+### Symulator rzutu kostką V2:
+```text
+Drugi symulator rzutu kostką polega na podaniu jednej komendy do terminala.
+Komenda posiada własny schemat xDy+z. 
+Gdzie: 
+x = liczba rzutów,
+y = rodzaj kostki,
+z = modyfikator.
 ```
 
 
