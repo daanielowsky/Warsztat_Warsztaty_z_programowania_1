@@ -10,13 +10,13 @@ public class Dice_v2 {
 
     public static void main(String[] args) throws InterruptedException {
 
-//        pisanie("W tej wersji kostki do gry wystarczy Twoja jedna komenda w konsoli. \n");
-//        pisanie("Wzór będzie wyglądał następująco: \" xDy+z \".\n");
-//        pisanie("x = ilość rzutów kostką,\n");
-//        pisanie("y = rodzaj kostki,\n");
-//        pisanie("z = modyfikator do rzutu.\n");
-//        System.out.println();
-//        TimeUnit.SECONDS.sleep(1);
+        pisanie("W tej wersji kostki do gry wystarczy Twoja jedna komenda w konsoli. \n");
+        pisanie("Wzór będzie wyglądał następująco: \" xDy+z \".\n");
+        pisanie("x = ilość rzutów kostką,\n");
+        pisanie("y = rodzaj kostki,\n");
+        pisanie("z = modyfikator do rzutu.\n");
+        System.out.println();
+        TimeUnit.SECONDS.sleep(1);
         pisanie("W takim razie powiedz mi jak ma wyglądać rzut kością: ");
         Scanner scan = new Scanner(System.in);
         String commend = scan.nextLine();
@@ -36,10 +36,11 @@ public class Dice_v2 {
 
             Random rand = new Random();
 
-            int wynik1 = x * (1 + rand.nextInt(y)) + z;
-            int wynik2 = x * (1 + rand.nextInt(y)) + z;
-
-            System.out.println(wynik1 + " " + wynik2);
+            for (int i = 1; i <= x; i++) {
+                int wynik = (1 + rand.nextInt(y)) + z;
+                System.out.print("Wynik " + i + " rzutu kością: ");
+                System.out.println(wynik);
+            }
 
         }
 
@@ -59,10 +60,54 @@ public class Dice_v2 {
 
             Random rand = new Random();
 
-            int wynik1 = x * (1 + rand.nextInt(y)) + (-z);
-            int wynik2 = x * (1 + rand.nextInt(y)) + (-z);
+            for (int i = 1; i <= x; i++) {
+                int wynik = (1 + rand.nextInt(y)) + z;
+                System.out.print("Wynik " + i + " rzutu kością: ");
+                System.out.println(wynik);
+            }
+        }
 
-            System.out.println(wynik1 + " " + wynik2);
+        if (Character.isLetter(commend.charAt(0)) && commend.contains("+")) {
+            String rcommend = commend.replaceAll("D", "");
+            String[] parts = rcommend.split("\\+");
+            String part2 = parts[0];
+            String part3 = parts[1];
+            int y = Integer.parseInt(part2);
+            int z = Integer.parseInt(part3);
+            Random rand2 = new Random();
+
+            System.out.println("Wynik rzutu to: " + ((1 + rand2.nextInt(y)) + z));
+        }
+
+        if (Character.isLetter(commend.charAt(0)) && commend.contains("-")) {
+            String rcommend = commend.replaceAll("D", "");
+            String[] parts = rcommend.split("\\-");
+            String part2 = parts[0];
+            String part3 = parts[1];
+            int y = Integer.parseInt(part2);
+            int z = Integer.parseInt(part3);
+            Random rand2 = new Random();
+
+            System.out.println("Wynik rzutu to: " + ((1 + rand2.nextInt(y)) + (-z)));
+        }
+
+        if (Character.isLetter(commend.charAt(0)) && !commend.contains("-") && !commend.contains(("+"))) {
+            String rcommend = commend.replaceAll("D", "");
+            int y = Integer.parseInt(rcommend);
+            Random rand3 = new Random();
+
+            System.out.println("Wynik rzutu to: " + (1 + rand3.nextInt(y)));
+        }
+
+        if (Character.isDigit(commend.charAt(0)) && !commend.contains("-") && !commend.contains(("+"))) {
+            String[] parts = commend.split("D");
+            String part1 = parts[0];
+            String part2 = parts[1];
+            int y = Integer.parseInt(part2);
+            int x = Integer.parseInt(part1);
+            Random rand3 = new Random();
+            for (int i = 1; i < x; i++)
+            System.out.println("Wynik rzutu " + i + " rzutu to: " + (1 + rand3.nextInt(y)));
         }
 
     }
