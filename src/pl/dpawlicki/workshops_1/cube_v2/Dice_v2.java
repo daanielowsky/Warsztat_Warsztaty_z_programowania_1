@@ -107,7 +107,7 @@ public class Dice_v2 {
             int x = Integer.parseInt(part1);
             Random rand3 = new Random();
             for (int i = 1; i < x; i++)
-            System.out.println("Wynik rzutu " + i + " rzutu to: " + (1 + rand3.nextInt(y)));
+            System.out.println("Wynik " + i + " rzutu kością to: " + (1 + rand3.nextInt(y)));
         }
 
     }
