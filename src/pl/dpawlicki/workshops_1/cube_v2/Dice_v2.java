@@ -36,11 +36,17 @@ public class Dice_v2 {
 
             Random rand = new Random();
 
+            int finish = 0;
+
             for (int i = 1; i <= x; i++) {
-                int wynik = (1 + rand.nextInt(y)) + z;
+                int wynik = (1 + rand.nextInt(y));
                 System.out.print("Wynik " + i + " rzutu kością: ");
                 System.out.println(wynik);
+                finish += wynik;
             }
+
+            finish += z;
+            System.out.println("Wynik rzutów to: " + finish);
 
         } else if (Character.isDigit(commend.charAt(0)) && commend.contains("-")) {
             String[] parts = commend.split("D");
@@ -58,11 +64,17 @@ public class Dice_v2 {
 
             Random rand = new Random();
 
+            int finish = 0;
+
             for (int i = 1; i <= x; i++) {
-                int wynik = (1 + rand.nextInt(y)) + z;
+                int wynik = (1 + rand.nextInt(y));
                 System.out.print("Wynik " + i + " rzutu kością: ");
                 System.out.println(wynik);
+                finish += wynik;
             }
+            finish += z;
+            System.out.println("Wynik rzutów to: " + finish);
+
         } else if (Character.isLetter(commend.charAt(0)) && commend.contains("+")) {
             String rcommend = commend.replaceAll("D", "");
             String[] parts = rcommend.split("\\+");
@@ -73,6 +85,7 @@ public class Dice_v2 {
             Random rand2 = new Random();
 
             System.out.println("Wynik rzutu to: " + ((1 + rand2.nextInt(y)) + z));
+
         } else if (Character.isLetter(commend.charAt(0)) && commend.contains("-")) {
             String rcommend = commend.replaceAll("D", "");
             String[] parts = rcommend.split("\\-");
@@ -83,12 +96,14 @@ public class Dice_v2 {
             Random rand2 = new Random();
 
             System.out.println("Wynik rzutu to: " + ((1 + rand2.nextInt(y)) + (-z)));
+
         } else if (Character.isLetter(commend.charAt(0)) && !commend.contains("-") && !commend.contains(("+"))) {
             String rcommend = commend.replaceAll("D", "");
             int y = Integer.parseInt(rcommend);
             Random rand3 = new Random();
 
             System.out.println("Wynik rzutu to: " + (1 + rand3.nextInt(y)));
+            
         } else if (Character.isDigit(commend.charAt(0)) && !commend.contains("-") && !commend.contains(("+"))) {
             String[] parts = commend.split("D");
             String part1 = parts[0];
@@ -97,7 +112,7 @@ public class Dice_v2 {
             int x = Integer.parseInt(part1);
             Random rand3 = new Random();
             for (int i = 1; i <= x; i++)
-            System.out.println("Wynik " + i + " rzutu kością to: " + (1 + rand3.nextInt(y)));
+                System.out.println("Wynik " + i + " rzutu kością to: " + (1 + rand3.nextInt(y)));
         }
 
     }
