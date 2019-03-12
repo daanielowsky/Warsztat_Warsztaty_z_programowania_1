@@ -51,7 +51,12 @@ z = modyfikator.
 ### Wyszukiwarka najpopularniejszych słów
 
 ```text
-xyz
+Program polega na:
+- pobraniu Headerów z wybranej przez nas witryny internetowej,
+- zapisaniu ich wszystkich do pliku "popular_words.txt",
+- przefiltrowaniu słów ze słów któtszych niż 3 znaki oraz zlikwidowaniu słów "kluczy",
+- zapisaniu przefiltrowanych słów do "pliku filtred_words.txt"
+
 ```
 
 
